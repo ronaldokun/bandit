@@ -15,14 +15,29 @@ MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 ## 4 - 5: Using command `file` to check readability of file
 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
-## 5 - 6:
+## 5 - 6: Using find with arguments
 > The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
 
     human-readable
     1033 bytes in size
     not executable
 
+### Solution:
 ```
 find . -type f -size 1033c \! -executable -readable -exec file '{}' \; 
 ```
 HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+## 6 - 7: Using find with grep
+> The password for the next level is stored somewhere on the server and has all of the following properties:
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
+
+### Solution
+```
+find . -type f  -size 33c -readable -exec ls -l '{}' \; | grep "bandit7 bandit6"
+```
+### Password
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
