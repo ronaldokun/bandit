@@ -41,3 +41,12 @@ find . -type f  -size 33c -readable -exec ls -l '{}' \; | grep "bandit7 bandit6"
 ### Password
 morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
+## 7 - 8
+The password for the next level is stored in the file data.txt next to the word millionth
+
+### Solution 
+```
+grep "millionth" data.txt
+dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+```
+
