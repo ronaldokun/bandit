@@ -50,3 +50,11 @@ grep "millionth" data.txt
 dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 ```
 
+## 8 - 9
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+
+### Solution
+`cat data.txt | sort | uniq -c | sed 's/\s\s*/ /g' | grep " 1 " | cut -d ' ' -f 3`
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+
