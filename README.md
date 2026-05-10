@@ -60,3 +60,8 @@ The password for the next level is stored in the file data.txt in one of the few
 ### Solution
 `strings data.txt | grep "========" | sed 's/==*/=/g' | cut -d ' ' -f 2`
 > FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+## 10
+The password for the next level is stored in the file data.txt, which contains base64 encoded data
+> base64 data.txt | cud -d ' ' -f 4
+dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
